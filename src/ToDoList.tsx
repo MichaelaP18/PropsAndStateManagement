@@ -12,13 +12,19 @@ import {
 
 const ToDoList = ({ tasks }) => {
     return (
-        <ul style={[styles.task, styles.completed]}>
-            {tasks.map((task, index) => (<li key={index}>{task}</li>))}
-        </ul>
+        <View>
+        <View>
+            {tasks.map((task, index) => (<View key={index} style={[styles.task, styles.completed]}>
+                <Text>{task}</Text>
+                </View>
+                ))}
+            </View>
+
         <View style={styles.form}>
             <TextInput style={styles.input}
                    placeholder="Add a new task..." />
             <Button title="Add" />
+        </View>
         </View>
         );
 
@@ -31,7 +37,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 20,
         marginTop: 20,
-    },
+        },
     input: {
         flex: 1,
         borderWidth: 1,

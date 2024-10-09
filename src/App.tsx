@@ -1,6 +1,6 @@
 
 
-import React { useState } from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   View,
@@ -10,7 +10,7 @@ import {
 import ToDoList from './ToDoList';
 
 
-function App: React.FC = () => {
+const App: React.FC = () => {
     const [tasks, newTasks] = useState<String[]>([
         'Do Laundry',
         'Go to gym',
